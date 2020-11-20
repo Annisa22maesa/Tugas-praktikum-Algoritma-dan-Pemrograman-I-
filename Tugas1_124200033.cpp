@@ -1,5 +1,5 @@
 #include <iostream>
-#include <conio.h>
+#include <windows.h>
 using namespace std;
 main()
 {
@@ -20,7 +20,7 @@ main()
 	
 	cout<< "Nilai akhir saya " <<x;
 	
-	getche();
+	system("pause");
 	
 	return 0;
 }

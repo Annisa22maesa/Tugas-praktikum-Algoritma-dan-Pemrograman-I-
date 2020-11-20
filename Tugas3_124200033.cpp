@@ -18,6 +18,8 @@ main(){
 	if (nama == user && pass == 123)
 		cout<< "Login Berhasil!\n";
 		
+		
+		
 	else if ( nama == user && pass != 123 ){
 		cout<< "Password anda salah! ";
 		exit(0);}
