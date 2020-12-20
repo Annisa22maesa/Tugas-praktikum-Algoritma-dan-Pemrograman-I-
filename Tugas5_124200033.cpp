@@ -1,6 +1,6 @@
-#include <iostream>
-using namespace std;
-main(){
+	#include <iostream>
+	using namespace std;
+	main(){
 	
 	int pil,p,lb,t,c;
 	
