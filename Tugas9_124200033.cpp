@@ -2,18 +2,15 @@
 using namespace std;
 main(){
 
-	int a,no,i,j,i_minus;
-	float ave,total,max2;
+	int a=0,no,i,max=0,min=0,max2=0,selisih[999]={0},nilai[a],i_minus;
+	float ave,total=0;
 	
 	cout <<"Masukkan banyak angka : "; cin >> a;
 	
-	int nilai[a];
-	for(i=0; i < a; i++)
-	{
+	for(int i=0; i < a; i++){
 		no = i+1;
 		cout << "Angka ke- "<< no << " : ";
 		cin >> nilai[i];
-		total += nilai[i];
 	}
 	cout<<endl;
 	
@@ -24,26 +21,20 @@ main(){
 		cout << nilai[i] << " ";
 	}
 	
-	int max = nilai[0];
+	max = nilai[0];
 		for (i=0; i < a; i++)
 		{
-			if (nilai[i] > max )
-			max = nilai[i];
+			if (nilai[i] > max ){
+				max = nilai[i];
+			}else min = nilai[0];
+				if(nilai[i] < min ){
+					min = nilai[i];
+				}
 		}
-	cout <<"\nMaksimum	: "<<max<<endl;
-	
-	int min = nilai[0];
-		for (j=0; j < a; j++)
-		{
-			if (nilai[j] < min )
-			min = nilai[j];
-		}
-		cout <<"Minimum		: "<<min<<endl;
-	
-	ave=total/a;
-	cout <<"Rata-rata	: "<<ave<<endl;
-	
-	int selisih[i];
+	for (i=0; i < a; i++){
+		total += nilai[i];
+	}ave=total/a;
+
 	a = a-1;
 	for(i=0; i < a; i++){
 		i_minus= i+1;
@@ -56,8 +47,11 @@ main(){
 			max2 = selisih[i];
 		}
 	}
+	
+	cout <<"\nMaksimum	: "<<max<<endl;
+	cout <<"Minimum		: "<<min<<endl;
+	cout <<"Rata-rata	: "<<ave<<endl;
 	cout<<"Selisih Max	: " << max2;
 	return 0;
 
 }
-	
